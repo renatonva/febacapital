@@ -27,7 +27,7 @@ JWT (JSON Web Token) é um padrão aberto (RFC 7519) que define um formato compa
 
 2. Rode no terminal o comando composer install, mas certifique que o composer.json da raiz do projeto está de fato na pasta, nele que é instalada a lib para o jwt.
 
-3. As tabelas abaixo são as utilizadas no projeto, com base no teste enviado
+## As tabelas abaixo são as utilizadas no projeto, com base no teste enviado
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,6 +37,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+##
 
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,6 +48,7 @@ CREATE TABLE clientes (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+##
 
 CREATE TABLE livros (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,7 +60,11 @@ CREATE TABLE livros (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+##
+
 4. O JWT precisa de uma cahve secreta, para gerar o hash, rode o comando openssl rand -base64 32 e depois cole na posição secret_key no array dentro de database/jwt.php
+
+##
 
 5. Se você utiliza o Insomnia, para testar siga os passos
 
@@ -73,7 +79,9 @@ No corpo da requisição, escolha o tipo JSON e insira o conteúdo:
 }
 Envie a requisição.
 
-2. Cadastro de Clientes (POST /clientes)
+##
+
+Cadastro de Clientes (POST /clientes)
 
 Método: POST
 URL: http://localhost:8000/clientes
